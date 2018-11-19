@@ -1,0 +1,18 @@
+<h1>客户查询</h1>
+<hr>
+<table>
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customerArr; let i = index">
+            <td>{{ i }}</td>
+            <td>{{ customer.name }}</td>
+            <td><a [routerLink]="['/customer/', customer.id]">详情</a></td>
+        </tr>
+    </tbody>
+</table>

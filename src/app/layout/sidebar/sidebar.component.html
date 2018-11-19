@@ -1,0 +1,7 @@
+<aside>
+    <ul>
+        <li *ngFor="let nav of SidebarNavs">
+            <a [routerLink]="nav.path">{{nav.title}}</a>
+        </li>
+    </ul>
+</aside>

@@ -1,0 +1,24 @@
+aside{
+    width: 210px;
+    height: 100%;
+    background: #363636;
+}
+aside ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+aside ul li a{
+    color: #999;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+aside ul li a:hover{
+    color: #eee;
+    background: #727272;
+}
+aside ul li a.active{
+    color: #eee;
+    background: #727272;
+}

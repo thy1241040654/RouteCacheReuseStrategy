@@ -1,0 +1,9 @@
+<header>
+    <aside></aside>
+    <ul class="tabs-nav">
+        <li *ngFor="let nav of tabNavs" [class]="nav.isAction ? 'active' : '' ">
+            <a [routerLink]="nav.path">{{ nav.title }}</a>
+            <span *ngIf="nav.canClose" class="close" (click)="closeTab(nav.path)">×</span>
+        </li>
+    </ul>
+</header>
