@@ -1,27 +1,18 @@
 # RouteCacheReuseStrategy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+angular 6.0.3
+基于自定义路由重用策略实现标签页系统效果
 
-## Development server
+## 基于路由重用策略实现对路由的缓存
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+主要代码在 `app/app.reuseStrategy.ts` 中，继承了 `angular` 提供的 `RouteReuseStrategy` 机制，参照知乎上的思路 `https://zhuanlan.zhihu.com/p/29823560` 实现了对访问过路由的缓存。
 
-## Code scaffolding
+用了一个操作标签页数据的服务 `app/service/tabNav.service.ts` 来管理标签页的数据。在页面导航条组件 `app/layout/header/header.component.ts` 中，注入此服务，使用标签数据渲染页面。
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 开发环境启动项目
 
-## Build
+终端执行 `ng serve` 可启动开发服务。 访问地址为 `http://localhost:4200/`。 启用了热加载，如果更改任何源文件，应用程序将自动重新加载。
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 打包项目
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+终端执行 `ng build` 可打包项目。 The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
